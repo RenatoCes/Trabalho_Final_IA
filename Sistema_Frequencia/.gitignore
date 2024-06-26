@@ -1,0 +1,30 @@
+# Ignorar diretório de rostos conhecidos
+rostos_conhecidos/
+
+# Ignorar arquivo de presença
+presenca.csv
+
+# Ignorar arquivos de sistema e caches
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+# Ignorar configurações específicas do VSCode
+.vscode/
+
+# Ignorar ambientes virtuais (virtualenv)
+venv/
+ENV/
+env/
+.venv/
+
+# Ignorar arquivos temporários
+*.tmp
+*.swp
+*.bak
+*.orig
+
+# Ignorar arquivos de configurações de sistema operacional
+.DS_Store
+Thumbs.db

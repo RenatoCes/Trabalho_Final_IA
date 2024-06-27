@@ -53,13 +53,15 @@ class SistemaReconhecimentoFacial:
 
                 face_names = []
                 for face_encoding in face_encodings:
-                    matches = face_recognition.compare_faces(self.rostos_conhecidos_encodings, face_encoding)
-                    name = "Desconhecido"
-
-                    face_distances = face_recognition.face_distance(self.rostos_conhecidos_encodings, face_encoding)
-                    best_match_index = np.argmin(face_distances)
-                    if matches[best_match_index]:
-                        name = self.rostos_conhecidos_nomes[best_match_index]
+                    if self.rostos_conhecidos_encodings:
+                        matches = face_recognition.compare_faces(self.rostos_conhecidos_encodings, face_encoding)
+                        face_distances = face_recognition.face_distance(self.rostos_conhecidos_encodings, face_encoding)
+                        best_match_index = np.argmin(face_distances)
+                        name = "Desconhecido"
+                        if matches[best_match_index]:
+                            name = self.rostos_conhecidos_nomes[best_match_index]
+                    else:
+                        name = "Desconhecido"
 
                     face_names.append(name)
 

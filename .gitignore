@@ -1,0 +1,11 @@
+# Ignorar o diretório archive
+Reconhecimento_Facial/archive/
+
+# Ignorar o diretório test
+Reconhecimento_Facial/test/
+
+# Outras regras
+*.log
+*.pyc
+__pycache__/
+env/
